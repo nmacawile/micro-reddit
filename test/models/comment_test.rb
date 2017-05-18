@@ -15,11 +15,11 @@ class CommentTest < ActiveSupport::TestCase
 
 	test "should keep reference to the commenter" do
 		@comment.save
-		assert @comment.user = @user
+		assert @comment.user == @user
 	end
 
 	test "should keep reference to the parent post" do
 		@comment.save
-		assert @comment.post = @post
+		assert @comment.post == @post
 	end
 end
