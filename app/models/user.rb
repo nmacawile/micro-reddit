@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 	has_many :posts, foreign_key: "author_id"
+	has_many :comments
 	before_save { email.downcase! }
 	validates :name, presence: true,
 	                 length: { minimum: 3, maximum: 20 },
