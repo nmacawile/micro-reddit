@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 	before_save { email.downcase! }
 	validates :name, presence: true,
-	                 length: { maximum: 20 },
+	                 length: { minimum: 3, maximum: 20 },
 	                 format: { with: /\A[\w\-]+\z/ },
 	                 uniqueness: true
 	validates :email, presence: true,

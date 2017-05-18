@@ -45,6 +45,7 @@ class UserTest < ActiveSupport::TestCase
 
     test "name validation should reject invalid names" do
         valid_names = %w[u$er122
+                         u1
                          n@me3
                         'with space'
                          with.dot]
